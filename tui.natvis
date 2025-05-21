@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <!-- https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2017/debugger/create-custom-views-of-native-objects -->
+    <Type Name="s8">
+        <DisplayString>{beg,[len]}</DisplayString>
+        <StringView>beg,[len]</StringView>
+        <Expand>
+            <Item Name="[size]" ExcludeView="simple">len</Item>
+            <ArrayItems>
+                <Size>len</Size>
+                <ValuePointer>beg</ValuePointer>
+            </ArrayItems>
+        </Expand>
+    </Type>
+</AutoVisualizer>
